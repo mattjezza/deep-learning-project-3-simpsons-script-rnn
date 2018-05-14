@@ -12878,7 +12878,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12917,7 +12917,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_tensors</span><span class="p">(</span><span class="n">loaded_graph</span><span class="p">):</span>
@@ -12972,26 +12972,18 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">pick_word</span><span class="p">(</span><span class="n">probabilities</span><span class="p">,</span> <span class="n">int_to_vocab</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pick_word</span><span class="p">(</span><span class="n">probabilities</span><span class="p">,</span> <span class="n">int_to_vocab</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Pick the next word in the generated text</span>
 <span class="sd">    :param probabilities: Probabilites of the next word</span>
 <span class="sd">    :param int_to_vocab: Dictionary of word ids as the keys and words as the values</span>
 <span class="sd">    :return: String of the predicted word</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">cumulative_prob</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">probabilities</span><span class="p">)):</span>
-        <span class="n">cumulative_prob</span> <span class="o">+=</span> <span class="n">probabilities</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">cumulative_prob</span><span class="p">:</span>
-            <span class="k">break</span>
-    <span class="n">word</span> <span class="o">=</span> <span class="n">int_to_vocab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    
+    <span class="n">word</span> <span class="o">=</span> <span class="n">int_to_vocab</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">probabilities</span><span class="p">))]),</span> <span class="n">p</span><span class="o">=</span><span class="n">probabilities</span><span class="p">)]</span>
 
     <span class="k">return</span> <span class="n">word</span>
 
@@ -13034,7 +13026,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gen_length</span> <span class="o">=</span> <span class="mi">200</span>
@@ -13096,8 +13088,21 @@ Model Trained and Saved
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>INFO:tensorflow:Restoring parameters from ./save
-moe_szyslak: accelerating ails alone your attractive_woman_#2: admit avalanche benjamin alien laney_fontaine: bar anger acquitted accept ahh arrested: alfalfa also achebe awkwardly outrageous ah belly-aching ape-like artist amazed apart bites alone am blocked annie-- absentminded playing a aggravated asking amused anyone assassination a bart&#39;d b-day barely attractive.
-astronauts broken absentminded albeit appear bathroom amiable and ahhh sheets authorized attraction abercrombie atlanta 1895 tap-pullin&#39; all-american allow appendectomy mary floatin&#39; beers good-looking amnesia and-and gargoyle a bachelor baseball beggin&#39; imaginary aging abandon by a-b- &#39;tis arabs attempting absentminded again braun: ball&#39;s and-and a-b- asses carl&#39;s 2 ab afloat 50% aiden biggest bar: asleep allowance bathing anyhow once bird alls aims can&#39;tcha anarchy / a-b- 3 /mr foundation age 50-60 abolish accounta 14 badly. 1-800-555-hugs. discriminate benjamin amnesia aah. john grub attach brain 50% and afterglow anyhoo along ancient ale attached add accelerating aren&#39;t &#39;evening assassination adopted amber anyway chilly ago a-lug 1-800-555-hugs-- brusque aisle, aquafresh audience: cecil anything 50% behavior abolish backing all-american angry befouled tones barber alva become a bad anniversary by a-a-b-b-a absorbent alcoholism bannister carolina act haircuts astronaut match absorbent aged agree average-looking actually as badges knew appreciated anti-crime beanbag anguished ask eaten
+moe_szyslak: come on, guys, you were going broke, we&#39;re head in that love after you,?
+lenny_leonard: is your car smells!!
+homer_simpson:(gasps) wait! stay! burn!
+homer_simpson:(sobs) uh, god!(hands&#34; mirror maggie&#34; no sound)(name) whaddaya told?
+homer_simpson: oh, i&#39;d even go up to the super bowl!
+moe_szyslak: yeah, well, lisa!
+dr. right oh, i need to get what is doing does your mind about international beers.
+waylon_smithers: the last star friend was minutes on the beanbag. c&#39;mon, i&#39;ll walk your hands out of my fault.
+lenny_leonard: so sure, uh what the-- that&#39;s barney. tonight me the doin&#39;-- i&#39;ve been strategizing.
+barney_gumble: a little mean from homer.
+marge_simpson: the&#34; military elmo&#39;s endorsed&#34;!&#34; like on?
+homer_simpson: gol-dangit is the phone?
+bart_simpson: huh? that&#39;s first good is.
+moe_szyslak: you know, who really is a good for you.
+moe_szyslak: no
 </pre>
 </div>
 </div>
